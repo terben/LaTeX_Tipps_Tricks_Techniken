@@ -1,2 +1,6 @@
 # LaTeX_Tipps_Tricks_Techniken
-Begleitmaterialien zu meinen LaTeX - Tipps,Tricks und Techniken Videos (YouTube)
+
+Dieses Repository enthält Materialien zu meinen deutschen *YouTube*
+LaTeX-Tipps, Tricks und Techniken Videos.
+
+YouTube Kanal: [Thomas Erben - Tutorials und Lehrvideos](https://www.youtube.com/channel/UCgaFgieXi6HIryaFyhhzQtg)
