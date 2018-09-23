@@ -1,0 +1,64 @@
+% LaTeX-Dokument zum ersten Teil der LaTeX-Tipps, Tricks und
+% Techniken Serie. Es geht um verschiedene Strichsymbole der
+% deutschen Sprache (Minuszeichen, Binde- und Gedankenstriche)
+
+\documentclass[12pt,a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+% 'besser aussehende' Tabellen - dies wird in einem anderem
+% Video der Tipps, Tricks und Techniken Reihe vorgestellt werden.
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\begin{document}
+%
+\section*{Von Minuszeichen, Binde- und Gedankenstrichen}
+Man beachte die \emph{verschiedenen Strichsymbole} bei der Zahl $-9$,
+dem Gedankenstrich -- so wie hier --, dem Zahlenbereich 2--5 und dem
+Bindestrich wie in der Herrmann-Harry-Schmitz-Straße!
+
+Unter anderem zur Beschreibung von Unix-Kommandos, wie \texttt{ls
+  -{}-reverse}, braucht man auch hin und wieder einen \emph{doppelten
+  Strich}.
+
+Tabelle~\ref{tab:strichsymbole} fasst das Wesentliche zusammen. Auf
+der Seite
+\href{https://de.wikipedia.org/wiki/Wikipedia:Typografie#Bindestrich.2C_Gedankenstrich.2C_Minuszeichen_und_andere_waagerechte_Striche}{Wikipedia:Typografie}
+finden Sie nähere Erläuterungen zu dem Thema.
+%
+\begin{table}[h]
+  \centering
+  \captionabove{Strichsymbole und wie sie in \LaTeX{} gesetzt werden.
+    In der ersten Spalte ist zur Verdeutlichung des verschiedenen
+    Aussehens jeweils ein \enquote{+} vorangestellt.}
+  \label{tab:strichsymbole}
+  \begin{tabularx}{\textwidth}{ccX}
+    %
+    \toprule
+    Strichsymbol & \LaTeX--Quelltext & Bedeutung und Erläuterungen \\
+    %
+    \midrule
+    $+-$ & \$-\$ & \textbf{Minuszeichen:} Bitte achten Sie darauf, im
+      Fließtext negative Zahlen korrekt zu setzen. Korrekt gesetzt
+      (\$-9\$ in \LaTeX--Quelltext) sieht es so aus: $-9$. Falsch
+      gesetzt (-9 im \LaTeX--Quelltext) sieht es so aus: -9.\\
+    +- & - & \textbf{Bindestrich:} dient zur Trennung
+      zusammengesetzter Worte. \\
+    +-- & -{}- & \textbf{Gedankenstrich:} Neben dem Gedankenstrich
+      dient dieses Symbol unter Anderem zur Darstellung von
+      Zahlenbereichen wie in \enquote{1--5} oder zum Absetzen
+      von Zahlen und Buchstaben wie in \enquote{D--53121}. \\
+    +-{}- & -\{\}- & Um zwei Bindestriche direkt hintereinander zu
+      setzen, braucht man dieses Konstrukt, da \enquote{-{}-} der
+      Gedankenstrich ist. \\
+      %
+      \bottomrule
+  \end{tabularx}
+\end{table}
+
+\end{document}
