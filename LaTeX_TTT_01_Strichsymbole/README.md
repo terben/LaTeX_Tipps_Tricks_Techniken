@@ -1,4 +1,4 @@
-## Online Material zu [Teil 01]() meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
+## Online Material zu [Teil 01](https://youtu.be/EiLk7oMdpGs) meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
 
 - Die Datei *LaTeX_TTT_01.tex* enthält den Quelltext der im Video gezeigten
   LaTeX-Datei.
