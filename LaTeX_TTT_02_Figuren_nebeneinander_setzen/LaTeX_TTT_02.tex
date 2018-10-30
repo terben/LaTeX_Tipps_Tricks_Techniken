@@ -45,6 +45,10 @@ besprochen. \figref{fig:quad_recht} zeigt ein Quadrat und ein Rechteck.
   % Wir fassen zwei Figuren zu einer zusammen. Damit so nebeneinander
   % gesetzt werden darf die Gesamtbreite der Figuren '\textwidth'
   % nicht überschreiten.
+  %
+  % ACHTUNG: Zwischen den zwei folgenden \includegraphics-Befehlen
+  %          darf KEINE Leerzeile stehen - ansonsten erscheinen
+  %          die Figuren untereinander anstatt nebeneinander!
   \includegraphics[width=0.49\textwidth]{quadrat}   
   \includegraphics[width=0.49\textwidth]{rechteck}  
   \caption[Geometrische Figuren (zwei nebeneinander)]{Quadrat (links)
@@ -68,6 +72,9 @@ zusammenzufassen.
 %
 \begin{figure}[ht]
   \centering
+  % Hier sorgt die Leerzeile nach dem zweiten \includegraphics-Befehl
+  % dafür, dass das zweite Paar an Figuren unter dem ersten gesetzt
+  % wird.
   \includegraphics[width=0.3\textwidth]{quadrat}  
   \includegraphics[width=0.3\textwidth]{rechteck}
 
