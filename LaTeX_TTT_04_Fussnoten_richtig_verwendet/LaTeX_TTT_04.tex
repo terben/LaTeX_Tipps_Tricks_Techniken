@@ -1,0 +1,42 @@
+% Erweiterte Quelldatei zu Video 04 der LaTeX Tipps-Tricks-Techniken
+% Serie von Thomas Erben (siehe )
+
+\documentclass[12pt,a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+\usepackage{hyperref}
+
+\begin{document}
+%
+\section{Fußnoten}
+Hier ein kurzer Beispieltext mit drei Fußnoten: Unter dem
+Betriebssystem \textit{Microsoft Windows} gibt es zahlreiche
+Webbrowser.\footnote{siehe auch
+  \url{https://de.wikipedia.org/wiki/Webbrowser}} Bekannte Vertreter
+sind \textit{Firefox}\footnote{siehe auch
+  \url{https://www.mozilla.org/de/firefox/new/}} und
+\textit{Opera}\footnote{siehe auch \url{http://www.opera.com/de}}.
+
+Sie sollten folgende, typische Fehler beim Setzen von Fußnoten
+vermeiden:
+%
+\begin{enumerate}
+  \item Eine Fußnote wird nur dann direkt nach einem Wort gesetzt, wenn
+    sich die Fußnote \emph{nur auf dieses eine Wort} beziehen soll.
+    Bezieht sich eine Fußnote auf einen gesamten Satz oder auf einen
+    Satzteil, so steht die Fußnote \emph{nach dem Satzzeichen}!
+  \item Achten Sie darauf, dass direkt vor dem \texttt{\textbackslash
+    footnote}-Befehl \emph{keine} Leerzeichen oder Zeilenumbrüche im
+    Quelltext stehen! Dies führt im Ausgabedokument zu unerwünschten
+    Leerräumen vor dem Fußnotensymbol!
+  \item Vermeiden Sie Leerzeichen direkt nach der öffnenden Klammer
+    des \texttt{\textbackslash footnote}-Befehl, also etwas wie
+    \texttt{\textbackslash footnote\{ Dies ist eine Fußnote.\}}. Dies
+    führt zu unerwünschten Leerräumen in der Fußnote selbst.
+\end{enumerate}
+Beachten Sie, dass der letzte Punkt im Video nicht erwähnt wurde.
+\end{document}
