@@ -1,0 +1,39 @@
+% Kommentierte Quelldatei zu Video 05 der LaTeX Tipps-Tricks-Techniken
+% Serie von Thomas Erben
+% (siehe )
+
+\documentclass[12pt,a4paper]{scrartcl}
+
+% Deutsche Spracheinstellungen sind unter anderem für eine korrekte
+% Trennung nach deutschen Regeln verantwortlich (erster Satz unten)
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+% Die T1-Schriften behandeln Worte mit deutschen Umlauten korrekt,
+% u.a. Trennung von Worten mit Umlauten
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+% Mit dem folgenden Paket können Worte in Tele-type-Fonts getrennt werden
+\usepackage[htt]{hyphenat}
+
+\usepackage{parskip}
+
+\begin{document}
+%
+\section{Probleme bei der Worttrennung}
+Es gibt viele naturwissenschaftliche Fächer: Biologie, Physik,
+Informatik, Chemie, Mathematik.
+
+Es gibt viele Arten von Fahrzeugen: Rennwagen, Oldtimer, Traktoren,
+Smarts, Geländewagen.
+
+% Worte mit Bindestrichen werden standardmäßig von LaTeX nur an den
+% Bindestrichen getrennt. Dies kann mit deutschen Spracheinstellungen
+% mit dem Konstrukt '"=' für den Bindestrich vermieden werden.
+Worte mit Bindestrichen: Tschebyscheff-Funktion,
+Kfz-Unfallversicherung, Unix"=Kommandos, öffentlich-rechtlich.
+
+% Trennungen von Worten in Schreibmaschinenschrift sollten im
+% Einzelfall behandelt werden.
+Laden Sie sich von \textit{eCampus} aus dem Ordner für die heutige
+Übung die Datei \texttt{uebung\_01\_dateien.tgz} herunter.
+\end{document}
