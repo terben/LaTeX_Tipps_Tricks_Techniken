@@ -1,4 +1,4 @@
-## Online Material zu [Teil 05]() meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
+## Online Material zu [Teil 05](https://youtu.be/arSf8plyReE) meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
 
 - Die Datei *LaTeX_TTT_05.tex* enthält einen kommentierten Quelltext der im
   Video gezeigten LaTeX-Datei.
