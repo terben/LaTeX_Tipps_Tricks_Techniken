@@ -1,0 +1,54 @@
+% Kommentierte Quelldatei zu Video 06 der LaTeX Tipps-Tricks-Techniken
+% Serie von Thomas Erben
+% (siehe )
+
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+% Paket für Tabellen mit vorgegebener Gesamtbreite
+% und mit automatischer Worttrennung in den Spalten
+\usepackage{tabularx}
+
+\begin{document}
+  \section{Tabellen mit fester Breite}
+  %
+  Im Folgenden finden Sie eine Auflistung der angebotenen Kurse im
+  Winter und im Sommer.
+  \begin{table}[htb]
+    \centering
+    \captionabove{Kurse im Wintersemester}
+    %
+    \begin{tabularx}{\linewidth}{Xlll}
+      \hline
+      Kursname & Dozent & Raum & Zeit \\
+      \hline
+      EDV für Physikerinnen und Physiker & Thomas Erben & HS 1 & 
+        Mi. 12:00--13:00 \\
+      Analysis 1 & Lydia Leibniz & HS 2 & 
+        Mo. 08:00--10:00 \\
+      Lineare Algebra 1 & Gerhard Gauss & 
+        Großer Hörsaal & Do. 08:00--10:00\\
+      \hline
+    \end{tabularx}
+  \end{table}
+  %
+  \begin{table}[htb]
+    \centering
+    \captionabove{Kurse im Sommersemester}
+    %
+    \begin{tabularx}{\linewidth}{XXll}
+      \hline
+      Kursname & Dozent & Raum & Zeit \\
+      \hline
+      Quantenmechanik & Hubert Heisenberg & HS 1 & 
+        Mi. 10:00--12:00 \\
+      Analysis 2 & Lydia Leibniz & HS 2 & 
+        Di. 08:00-10:00 \\
+      Statistik & Frank Fourier & HS 3 & Fr. 13:00--15:00 \\
+      \hline
+    \end{tabularx}
+  \end{table}
+  %
+\end{document}
