@@ -1,0 +1,48 @@
+\documentclass[privat-2]{scrlttr2}
+
+% Um einen etwas längeren (Dummy)text zu haben:
+\usepackage{lipsum}
+
+\begin{document}
+
+% Datum
+\setkomavar{date}{\today}
+
+% Betreff
+\setkomavar{subject}{Kündigung meiner Mitgliedschaft}
+
+% Kundennummer
+\setkomavar{customer}[\customername]{DE-112233}
+
+% Ihr Zeichen
+\setkomavar{yourref}[\yourrefname]{IZ-12345}
+
+% Ihr Schreiben vom
+\setkomavar{yourmail}[\yourmailname]{1. Februar 2020}
+
+\begin{letter}{
+  Empfänger GmbH \\
+  Beispielweg 8 \\
+  23456 Irgendwo
+}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+Hiermit kündige ich meine Mitgliedschaft bei Ihnen zum 01.04.2021.
+
+% Drei Absätze Dummy-Text
+\lipsum[1-3]
+
+\closing{Mit freundlichen Grüßen}
+
+% Post Scriptum
+\ps PS: Ich bin den gesamten März nur telefonisch erreichbar.
+
+% Anlage(n)
+\encl{Mein Mitgliedsausweis}
+
+% Verteiler
+\cc{Vereinsvorsitzender, Kassenwart}
+
+\end{letter}
+\end{document}
