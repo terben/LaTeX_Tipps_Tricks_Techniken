@@ -1,4 +1,4 @@
-## Online Material zu [Teil 07]() meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
+## Online Material zu [Teil 07](https://youtu.be/ilbbMuvgBL4 ) meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
 
 - Die Datei *brief_TTT_07_einfach.tex* enthält einen kommentierten Quelltext
   der im Video gezeigten Standard Brief-Datei.
