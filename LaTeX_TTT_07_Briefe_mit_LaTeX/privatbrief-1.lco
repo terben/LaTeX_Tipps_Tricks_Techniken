@@ -1,8 +1,8 @@
-\ProvidesFile{privatbrief.lco}[2021/15/02 letter class option]
+\ProvidesFile{privatbrief-1.lco}[2021/15/02 letter class option]
 
 % Absenderdaten:
 \setkomavar{fromname}{Max Mustermann}
-\setkomavar{fromaddress}{Dingsbunsstr.~1\\D-12345~Musterhausen}
+\setkomavar{fromaddress}{Dingsbumsstr.~1\\D-12345~Musterhausen}
 \setkomavar{place}{Musterhausen}  % Ort beim Datum
 \setkomavar{fromphone}{+49\,(0)\,1573\,0796790}
 \setkomavar{fromemail}{max.mustermannn@gmail.com}
@@ -17,7 +17,7 @@
         fromfax=false,   % Fax-Nummer im Briefkopf anzeigen
         fromemail=true,  % E-Mail-Adresse im Briefkopf anzeigen
         fromurl=false,   % Webseite im Briefkopf anzeigen
-        backaddress
+        backaddress      % Absender soll im Brieffenster erscheinen
 }
 
 % Optionen zum Layout des Briefkopfes
@@ -36,11 +36,13 @@
 }
 
 % LaTeX-Pakete für den Brief
-%
-\RequirePackage{ngerman}                % Deutsche Sprache
-\RequirePackage{lmodern}                % Schänere Schriftart für Briefe
+% In einer lco-Datei werden Pakete mit
+% RequirePackage anstatt mit usepackage
+% eingebunden.
+\RequirePackage[ngerman]{babel}                % Deutsche Sprache
+\RequirePackage{lmodern}                % Schönere Schriftart für Briefe
 \RequirePackage[T1]{fontenc}            % Ligaturschriften (korrekte Umlaute
-                                        % im Ausgabedikument)
+                                        % im Ausgabedokument)
 \RequirePackage[utf8]{inputenc}         % Eingabezeichensatz
 \RequirePackage{graphicx}               % Zum Einbinden von Grafiken
 \RequirePackage{eurosym}                % Unterstützung für das Euro Symbol

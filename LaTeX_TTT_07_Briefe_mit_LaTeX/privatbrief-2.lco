@@ -1,8 +1,8 @@
-\ProvidesFile{privat-2.lco}[2021/15/02 letter class option]
+\ProvidesFile{privatbrief-2.lco}[2021/15/02 letter class option]
 
 % Absenderdaten:
 \setkomavar{fromname}{Max Mustermann}
-\setkomavar{fromaddress}{Dingsbunsstr.~1\\D-12345~Musterhausen}
+\setkomavar{fromaddress}{Dingsbumsstr.~1\\D-12345~Musterhausen}
 \setkomavar{place}{Musterhausen}  % Ort beim Datum
 \setkomavar{fromphone}{+49\,(0)\,1573\,0796790}
 \setkomavar{fromemail}{max.mustermannn@gmail.com}
@@ -47,7 +47,7 @@
 
 % LaTeX-Pakete für den Brief
 %
-\RequirePackage{ngerman}                % Deutsche Sprache
+\RequirePackage[ngerman]{babel}                % Deutsche Sprache
 \RequirePackage{lmodern}                % Schänere Schriftart für Briefe
 \RequirePackage[T1]{fontenc}            % Ligaturschriften (korrekte Umlaute
                                         % im Ausgabedikument)
