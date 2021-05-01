@@ -4,7 +4,7 @@
 \setkomavar{fromname}{Max Mustermann}
 \setkomavar{fromaddress}{Dingsbumsstr.~1\\D-12345~Musterhausen}
 \setkomavar{place}{Musterhausen}  % Ort beim Datum
-\setkomavar{fromphone}{+49\,(0)\,1573\,0796790}
+\setkomavar{fromphone}{+49\,(0)\,1573\,1234567}
 \setkomavar{fromemail}{max.mustermannn@gmail.com}
 %\setkomavar{fromfax}{+49\,(0)\,555\,12345}
 \setkomavar{fromurl}{\url{htttp://www.meine-seite.info}}
