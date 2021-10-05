@@ -1,0 +1,34 @@
+% Die Absatzauszeichung kann in LaTeX für die Koma-Skript
+% Klassen mit der Klassenoption 'parskip' von Absatzeinzug auf
+% Absatzabstand geändert werden.
+\documentclass[a4paper, parskip=half]{scrartcl}
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Für Klassen, die die Klassenoption 'parskip' nicht unterstützen
+% (z.B. die auf englische Bedürfnisse optimierte Artikelklasse
+% 'article') müssen zur Änderung der Absatzauszeichnug das Paket
+% 'parskip' einbinden:
+% \usepackage{parskip}
+
+\usepackage{amsmath}
+
+% blindtext ist eine Klasse, um Dummy-Text zu erzeugen:
+\usepackage{blindtext}
+
+\begin{document}
+%
+\section*{Absatzauszeichnung in \LaTeX}
+%
+\LaTeX{} bietet die Möglichkeit eines \emph{Absatzeinzugs} (Standard bei vielen Klassen) oder eines Absatzabstandes (zum Beispiel bei den Koma-Skript Klassen über das Paket über die Klassenoption \texttt{parskip}).
+
+Dies ist der zweite Absatz unseres kleinen Beispieltextes. Danach einer folgen noch weitere \emph{Dummy-Text} Absätze.
+
+\blindtext
+
+\blindtext
+
+\blindtext
+
+\end{document}

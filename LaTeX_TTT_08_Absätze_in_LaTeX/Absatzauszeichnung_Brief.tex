@@ -1,0 +1,30 @@
+\documentclass[privatbrief-1]{scrlttr2}
+
+\usepackage{blindtext}
+
+\begin{document}
+
+% Datum
+\setkomavar{date}{\today}
+
+% Betreff
+\setkomavar{subject}{Kündigung meiner Mitgliedschaft}
+
+\begin{letter}{
+  Empfänger GmbH \\
+  Beispielweg 8 \\
+  23456 Irgendwo
+}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+Dies ist der erste Absatz eines sehr einfachen Briefes. Hier einfach noch etwas mehr Text, damit der Absatz mehr als eine Zeile hat.
+
+Und dies ist der zweite Absatz zur Demonstration der Absatzauszeichung innerhalb der \texttt{scrlttr2}-Klasse.
+
+\blindtext
+
+\closing{Mit freundlichen Grüßen}
+
+\end{letter}
+\end{document}

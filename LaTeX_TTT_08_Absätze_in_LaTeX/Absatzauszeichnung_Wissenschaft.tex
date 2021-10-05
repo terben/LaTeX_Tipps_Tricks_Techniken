@@ -1,0 +1,31 @@
+\documentclass[a4paper
+,parskip
+]{scrartcl}
+%
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+
+\usepackage{blindtext}
+
+\begin{document}
+%
+\section*{Absatzauszeichnung in \LaTeX{} (wissenschaftlicher Text)}
+%
+\LaTeX{} bietet die Möglichkeit eines \emph{Absatzeinzugs} (Standard) oder eines Absatzabstandes (zum Beispiel über die Klassenoption \texttt{parskip} für die Koma-Skript-Klassen).
+
+Dies ist der zweite Absatz unseres kleinen Beispieltextes. Nach einer abgesetzten mathematischen Formel folgen noch weitere \emph{Dummy-Text} Absätze.
+%
+\[
+\sin(x)^2 + \cos(x)^2 = 1 \text{ (Trigonometrischer Pythagoras)}
+\]
+
+\blindtext
+
+\blindenumerate
+
+\blindtext
+
+\end{document}
