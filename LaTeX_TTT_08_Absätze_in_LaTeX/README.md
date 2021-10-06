@@ -1,4 +1,4 @@
-## Online Material zu [Teil 08]() meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
+## Online Material zu [Teil 08](https://youtu.be/bVT1Zw9HWFs) meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
 
 - Die Datei *Absatzauszeichnung_Prosa.tex* enthält einen kommentierten Quelltext
   des im Video gezeigten Prosa-Text Dokuments.
