@@ -1,0 +1,145 @@
+\documentclass[12pt, a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{showexpl}
+\usepackage{hyperref}
+\newcommand{\siunitx}{\texttt{siunitx}}
+
+\lstset{
+  numbers=none
+}
+
+\usepackage{siunitx}
+
+% globale Einstellungen für siunitx
+\sisetup{locale = DE,  % deutsche Darstellungen (z.B. Dezimalkomma
+                       % anstatt Dezimalpunkt)
+  range-phrase=--,     % Zahlenbereiche werden durch einen Strich dargestellt
+  separate-uncertainty % Fehlerangaben von Zahlen werden durch +/-
+                       % dargestellt (anstatt in Klammern)
+}
+
+% Das Angstrom ist als Einheit nicht in siunitx definiert:
+\DeclareSIUnit{\angstrom}{\text {Å}}
+
+% für oft benutzte Einheiten lässt sich ein Alias definieren:
+\DeclareSIUnit{\kms}{\kilo\meter\per\second}
+
+\begin{document}
+%
+\section{\siunitx-Beispiele für Zahlen und Einheiten}
+%
+Tabelle~\ref{tab:numb_units} zeigt praktische Beispiele für die
+Darstellung von Zahlen und Einheiten mit dem \siunitx-Paket.
+
+Für eine ausführliche Darstellung von \siunitx{} schauen Sie bitte in
+die sehr gute
+\href{http://mirrors.ctan.org/macros/latex/contrib/siunitx/siunitx.pdf}{Anleitung
+  des Pakets}.
+%
+\begin{longtable}{lcp{4cm}}
+  \captionabove{Praktische \siunitx-Beispiele}
+  \label{tab:numb_units} \\
+  %
+  \toprule
+  \textbf{\LaTeX-Quelltext} & \textbf{Textausgabe} & \textbf{Kommentar} \\
+  \midrule
+  \endfirsthead
+  %
+  \toprule
+  \textbf{\LaTeX-Quelltext} & \textbf{Textausgabe} & \textbf{Kommentar} \\
+  \midrule
+  \endhead
+  %
+  \midrule
+  \multicolumn{3}{c}{Fortsetzung folgt} \\
+  \bottomrule
+  \endfoot
+  %
+  \bottomrule
+  \endlastfoot
+  %
+  \verb|\qty{8}{\kilo\meter}| & \qty{8}{\kilo\meter} & Einfache Einheit \\
+  \verb|\qty{8}{\kilo\meter\per\second}| &
+    \SI{8}{\kilo\meter\per\second} & Zusammengesetzte Einheit \\
+  \verb|\qty{8.0e03}{\meter\second}| &
+    \qty{8.0e03}{\meter\second} & Zahlen können auf viele
+    verschiedene Arten angegeben werden (z.~B. Ausgabe von Programmen)\\
+  \verb|\qty{0,05}{\milli\second}| &
+    \qty{0,05}{\milli\second} & Beachte die unterschiedlichen
+    Darstellungen der Einheiten
+    \verb|\meter\second| (oben) und hier
+    \verb|\milli\second|. Das erste Beispiel benötigt einen kleinen
+    Abstand zwischen \texttt{m} und \texttt{s}! \\
+  \verb|\qty{10,31}{\meter\tothe{5}}| &
+    \qty{10,31}{\meter\tothe{5}} & höhere Potenzen bei den Einheiten \\
+  \verb|\qty{245.6 +- 10}{\meter\squared}| &
+    \qty{245.6 +- 10}{\meter\squared} & Zahlen mit Fehlerangabe \\
+  \midrule
+  \verb|\ang{10}| & \ang{10} & Winkel \\
+  \verb|\ang{10;5}| & \ang{10;5} & genauere Winkel \\
+  \verb|\ang{10;5;2}| & \ang{10;5;2} & noch genauere Winkel \\
+  \verb|\num{-9}| & \num{-9} & Negative Zahlen; korrekt
+    gesetztes Minuszeichen \\
+  \verb|\num{123456789}| &
+    \num{123456789} & lange Ganzzahlen (dargestellt in Dreierblöcken) \\
+  \verb|\complexnum{1 + 2i}| &
+    \complexnum{1+2i} & komplexe Zahlen (korrekte Darstellung der
+    imaginären Einheit) \\
+  \verb|\num[round-mode=places,%| & & \\
+    \verb|     round-precision=4]{12,123456}| &
+    \num[round-mode=places,round-precision=4]{12,123456} & Zahl auf 4
+    Dezimalstellen gerundet  \\
+  \verb|\num[round-mode=figures,%| & & \\
+    \verb|     round-precision=4]{12,123456}| &
+    \num[round-mode=figures,round-precision=4]{12,123456} & Zahl auf 4
+    signifikante Ziffern gerundet  \\
+  \midrule
+  \verb|\unit{\tera\electronvolt}| &
+    \unit{\tera\electronvolt} & Einheiten ohne Zahlen\\
+  \verb|\unit[per-mode = fraction]%| & & \\
+    \verb|  {\meter\per\second}| &
+    \unit[per-mode = fraction]{\meter\per\second} & Einheiten als
+    Bruch darstellen\\
+  \midrule
+  \verb|\qtyrange{2}{10}{\percent}| &
+    \qtyrange{2}{10}{\percent}  & Zahlenbereiche;
+    korrekt gesetztes Strichsymbol\\
+  \midrule
+  \verb|\qtylist{2;9;10}{\cm}| &
+    \qtylist{2;9;10}{\centi\meter} & Zahlenlisten  \\
+  \bottomrule
+\end{longtable}
+%
+\section{Unterstützung für Zahlenspalten in Tabellen}
+\siunitx{} unterstützt das Setzen von Tabellenspalten mit Zahlen, die
+nach dem Dezimaltrenner ausgerichtet sind. Hierzu ist der
+Spaltenausrichtungsparameter \enquote{\texttt{S}} in der
+Tabellenpräambel zu nutzen. Es ist auch möglich, Zahlen in der Tabelle
+zu runden oder auf eine bestimme Anzahl an Dezimalstellen zu
+bringen. Siehe das folgende Beispiel (\LaTeX-Quelltext links und
+Textausgabe rechts):
+%
+\begin{LTXexample}[pos=r,varwidth=true, numbers=none, rframe=]
+\begin{tabular}{cSS[round-mode=places,%
+                      round-precision=4]}
+  \toprule
+  \textbf{c-Spalte} &
+    \textbf{S-Spalte} &
+    \textbf{S-Spalte} \\
+   & & {gerundete Zahlen} \\
+  \midrule
+  1,2345 & 1,2345 & 1,2345 \\
+  12,345 & 12,345 & 12,345 \\
+  123,45 & 123,45 & 123,45 \\
+  1234,5 & 1234,5 & 1234,5 \\
+  \bottomrule
+\end{tabular}
+\end{LTXexample}
+
+\end{document}

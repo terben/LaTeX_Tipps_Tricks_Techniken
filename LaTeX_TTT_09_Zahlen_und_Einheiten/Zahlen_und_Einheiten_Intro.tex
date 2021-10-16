@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper,parskip]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+
+\begin{document}
+%
+\section{Das Setzen von Zahlen und Einheiten in \LaTeX}
+%
+% So sehe ich das sehr häufig (falsch gestezte Einiheiten)
+Eine Marathon Strecke beträgt 42.2 km. Ein Bekannter hat letzten Monat 100000 Euro im Lotto gewonnen.
+
+% so sollte es aussehen. Standard-LaTeX bietet nur umständliche
+% Möglichkeiten, Zahlen und Einheiten korrekt zu setzen:
+Eine Marathon Strecke beträgt 42{,}2\,km. Ein Bekannter hat letzten Monat 100\,000 Euro im Lotto gewonnen.
+%
+\begin{center}
+  \begin{tabular}{lcc}
+    \toprule
+    & falsch & richtig \\
+    \midrule
+    Ganzzahlen        & $100000000$        & $100\,000\,000$ \\
+    Dezimalzahlen (1) & $1.5$              & $1{,}5$ \\
+    Dezimalzahlen (2) & $1,5$              & $1{,}5$ \\
+    Exponentialzahlen & $1.0\times 10^{2}$  & $1{,}0\cdot 10^{2}$ \\
+    Einheiten (1)     & $1 mg$             & $1$\,mg \\
+    Einheiten (2)     & $1$\,gHz           & $1$\,GHz \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+%
+\end{document}

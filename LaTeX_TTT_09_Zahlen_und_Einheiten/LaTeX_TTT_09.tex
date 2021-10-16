@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper,parskip]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Das Paket siunitx kümmert sich um das korrekte Setzen von Zahlen
+% und Einheiten.
+\usepackage{siunitx}
+
+\sisetup{locale = DE,  % Zahlen und Einheiten nach deutschen Regeln
+                       % setzen. 'locale = US' würde Regeln aus dem
+                       % US-Amerikanischen nutzen.
+         per-mode = fraction,  % Einheiten in Bruchschreibweise setzen
+         separate-uncertainty} % Zahlen mit Fehler mit '+-' setzen
+                               % (Standard ist Klammerschreibweise)
+
+% Aliasse für eigene EInheiten können definiert werden. Nützlich,
+% wenn eine bestimmte Einheit öfter zu setzen ist.
+\DeclareSIUnit{\ms}{\meter\per\second}
+
+\begin{document}
+%
+\section{Zahlen und Einheiten}
+%
+\subsection{Zahlen (\texttt{num}-Kommando)}
+0{,}9; 150\,000; $1{,}2\cdot 10^{9}$
+
+\num{0,9}; \num{150000}; \num{1,2e9}
+
+% Der Num-Befehl nimmt Zahlen in 'allen' vernünftigen, auf einem
+% Computer üblichen Schreibweisen an und setzt sie korrekt:
+\num{0.9}; \num{.9}; \num{1.2d9}
+
+%
+\subsection{Einheiten (\texttt{unit}-Kommando)}
+m; mN; m\,N; $\frac{\text{m}}{\text{s}}$
+
+% Ich rate Ihnen dringend, für Einheiten die Makro-Schreibweise
+% zu verwenden, auch wenn sie manchmal etwas Tipparbeit bedeutet.
+% Nur so sind Sie sicher, immer korrekt gesetzte Einheiten zu haben!
+\unit{\meter}; \unit{\milli\newton}; \unit{\meter\newton};
+\unit{\meter\per\second}
+
+% Möchte man eine Einheit einmalig in einer besonderen Form drucken,
+% kamm man Optionen in eckigen Klammern setzen. Ansonsten setzt man
+% Optionen am besten global in der Präambel (sisetup-befehl oben)
+\unit[per-mode = fraction]{\meter\per\second}
+
+% setze Einheit für die ein Makro in der Präambel definiert wurde.
+\unit{\ms}
+
+%
+\subsection{Zahlen mit Einheiten (\texttt{qty}-Kommando)
+}
+1{,}3\,km; $(1{,}0 \pm 0{,}5)$\,m
+
+\qty{1.3}{\kilo\meter};
+
+% Zahlen mit Fehler:
+\qty{1.0 +- 0.5}{\meter}
+\qty[separate-uncertainty]{1.0 +- 0.5}{\meter}
+
+\subsection{Keine Probleme mehr mit Zahlen und Einheiten}
+Eine Marathon Strecke beträgt \qty{42.2}{\kilo\meter}.
+Ein Bekannter hat letzten Monat $\num{100000}$ Euro im Lotto gewonnen.
+
+\end{document}
