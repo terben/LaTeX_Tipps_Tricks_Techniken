@@ -1,0 +1,10 @@
+\begin{tikzpicture}[remember picture,overlay]
+  \draw [black, line width=0.5mm]
+    (current page text area.south west)
+    rectangle
+    (current page text area.north east);
+  \draw [<->, black, line width=1mm ]
+    (current page text area.north west) --
+    (current page text area.north east)
+  node[pos=0.5, rectangle, fill=lightgray]{\Large{Textbreite: \mylength}};
+\end{tikzpicture}

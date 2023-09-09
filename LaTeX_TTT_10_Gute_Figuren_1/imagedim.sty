@@ -1,0 +1,53 @@
+% Einfaches 'Paket' (Variablen- und Kommadodefinitionen), um
+% herauszufinden, auf welche Größe eine Figur gerendert werden würde.
+
+\RequirePackage{printlen}
+\uselengthunit{in}
+
+\newlength{\imageh}
+\newlength{\imaged}
+\newlength{\imagew}
+
+\newcommand{\setimageh}[1]{
+ \settoheight{\imageh}{\usebox{#1}}
+}
+
+\newcommand{\setimagew}[1]{
+ \settowidth{\imagew}{\usebox{#1}}
+}
+
+\newcommand{\ImageDimensions}[1]{
+  % create and save the box
+  \makeatletter
+  \@ifundefined{Image}{%
+    \newsavebox{\Image}%
+  }{}
+  \makeatother
+  %
+  \savebox{\Image}{\includegraphics{\detokenize{#1}}}
+  % show figure
+  \centering\usebox{\Image}\
+  \setimageh{\Image}
+  \setimagew{\Image}
+
+  Natürliche Breite der Figur: \printlength{\imagew} \\
+  Natürliche Höhe der Figur: \printlength{\imageh}
+}
+
+\newcommand{\ImageDimensionsScaled}[2]{
+  % create and save the box
+  \makeatletter
+  \@ifundefined{Image}{%
+    \newsavebox{\Image}%
+  }{}
+  \makeatother
+  %
+  \savebox{\Image}{\includegraphics[width=#2]{\detokenize{#1}}}
+  % show figure
+  \centering\usebox{\Image}\
+  \setimageh{\Image}
+  \setimagew{\Image}
+
+  Skalierte Breite der Figur: \printlength{\imagew} \\
+  Skalierte Höhe der Figur: \printlength{\imageh}
+}

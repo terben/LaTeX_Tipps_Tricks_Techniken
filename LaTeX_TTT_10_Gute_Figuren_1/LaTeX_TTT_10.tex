@@ -1,0 +1,47 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+%
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\graphicspath{{figuren/}}
+
+% Paket zur Bestimmung von Figurgrößen
+\usepackage{imagedim}
+
+% Pakete zum Zeichnen des Seitenlayouts
+\input{textframe_packages}
+%
+\begin{document}
+%
+% Seitenlayout zeichnen
+\input{textframe}
+%\blindtext
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics{standard.pdf}
+%  %
+%  \caption{Dies ist die Unterschrift der Figur}
+%\end{figure}
+
+% Bestimmung der physikalischen Figurgröße
+
+%\ImageDimensions{standard.pdf}
+
+%\ImageDimensionsScaled{standard.pdf}{0.5\textwidth}
+
+%
+\begin{figure}[h]
+   \centering
+   \includegraphics{figur_3}
+   \includegraphics{figur_3}
+   %
+   \includegraphics{figur_2}
+   \includegraphics{figur_2}
+   \includegraphics{figur_2}
+   %
+   \caption{Dies ist die Unterschrift der Figur}
+\end{figure}
+%
+\end{document}
+%
