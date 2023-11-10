@@ -1,4 +1,4 @@
-## Online Material zu [Teil 11]() meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
+## Online Material zu [Teil 11](https://youtu.be/FF4Pu6lNf_A) meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
 
 - Die Datei *thesis_plot.py* enthält das im Video vorgestellte Python-Modul zur Erstellung mit LaTeX gerendeter matplotlib-Figuren.
 
