@@ -7,4 +7,4 @@
 - Die Datei *LaTeX_TTT_11.ipynb* enthält das im Video verwendete
   Jupyter-Notebook zur Erstellung der Figuren.
 
-- Das Unterverzeichnis *figuren* enthält alle Abbildungen, so dass *LaTeX_TTT_11.tex* aofort compilierbar ist.
+- Das Unterverzeichnis *figuren* enthält alle Abbildungen, so dass *LaTeX_TTT_11.tex* sofort compilierbar ist.
