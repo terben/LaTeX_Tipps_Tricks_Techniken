@@ -1,4 +1,4 @@
-## Online Material zu [Teil 10]() meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
+## Online Material zu [Teil 10](https://youtu.be/_wL19CulV_w) meiner LaTeX-Tipps, Tricks und Techniken Videoreihe auf YouTube.
 
 - Die Datei *LaTeX_TTT_10.tex* enthält das im Video verwendete Dokumentgerüst.
 
