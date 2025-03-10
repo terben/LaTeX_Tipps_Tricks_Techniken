@@ -1,0 +1,82 @@
+\documentclass[11pt, a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{blindtext}
+
+% Um die Seitengeometry anzuzeigen
+\usepackage[showframe]{geometry}
+
+% Falls Sie das Wasserszeichen nur auf der ersten Seite
+% haben möchten, binden Sie das Paket background mit der Option
+% firstpage=True ein:
+% \usepackage[firstpage=True]{background}
+\usepackage{background}
+
+% Im folgenden setze ich mehrere Wasserzeichen auf
+% einer Seite. Hierzu dienen die
+% \AddEverypageHook{ .. \bg@material} Einbettungen.
+% Wenn man nur ein Wasserzeichen setzen möchte,
+% braucht man diese Konstruke nicht!
+
+% Wasserzeichen am linken Rand:
+\backgroundsetup{
+    color=gray,
+    position=current page.west,
+    angle=90,
+    vshift=-5mm,
+    opacity=0.8,
+    scale=3,
+    contents={Entwurf (\today)}
+}
+\makeatletter
+\AddEverypageHook{
+   % Wasserzeichen am oberen Rand
+   \backgroundsetup{
+       color=cyan,
+       position=current page.north,
+       angle=0,
+       opacity=0.8,
+       scale=3,
+       contents={Entwurf (\today)}
+   }
+   \bg@material}
+\AddEverypageHook{
+    % Wasserzeichen mitten im Text
+    \backgroundsetup{
+        color=red,
+        position=current page.center,
+        angle=45,
+        opacity=0.6,
+        scale=3.5,
+        contents={Entwurf (\today)}
+    }
+    \bg@material}
+\AddEverypageHook{
+    % Wasserzeichen am rechten Rand
+    \backgroundsetup{
+        color=green,
+        position=current page.east,
+        angle=-90,
+        vshift=-5mm,
+        opacity=0.5,
+        scale=3.2,
+        contents={Entwurf (\today)}
+    }
+    \bg@material}
+\AddEverypageHook{
+    % Eine Grafik als Wasserzeichen
+    \backgroundsetup{
+        position=current page.center,
+        opacity=0.2,
+        angle=0,
+        scale=0.3,
+        contents={\includegraphics{figuren/YouTube_logo_Doktorhut_transp}}
+    }
+    \bg@material}
+\makeatother
+%
+\begin{document}
+    \section*{Dummy Abschnitt}
+    \blindtext[9]
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[11pt, a4paper]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[math]{blindtext}
+
+% Paket zum Anzeigen von Wasserzeichen:
+\usepackage{background}
+
+% Optionen für das Wasserzeichen
+\backgroundsetup{
+    color=gray,
+    position=current page.north,  % Position
+    angle=0,         % Orientierung
+    vshift=-4mm,     % vertikale Verschiebung
+    opacity=0.8,     % Deckkraft
+    scale=3,         % Skalierung
+    contents={Entwurf (\today)} % Text des Wasserzeichens
+}
+
+\begin{document}
+    %
+    \section*{Erster Dummy Abschnitt}
+    \blindtext[4]
+    \section*{Zweiter Dummy Abschnitt}
+    \blindtext[4]
+    %
+\end{document}
